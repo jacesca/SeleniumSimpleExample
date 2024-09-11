@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.18 on win32)" generated="20240911 08:57:16.941" rpa="false" schemaversion="4">
+<suite id="s1" name="Test With Robotframework" source="C:\Users\Jacqueline\Documents\projects\SeleniumSimpleExample\test_with_robotframework">
+<suite id="s1-s1" name="LoginTest" source="C:\Users\Jacqueline\Documents\projects\SeleniumSimpleExample\test_with_robotframework\LoginTest.robot">
+<kw name="Login Site" type="SETUP">
+<kw name="New Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20240911 08:57:17.661" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\Jacqueline\\Documents\\projects\\SeleniumSimpleExample\\test_with_robotframework\\output\\browser\\traces\\a0df9b6e-329a-4448-b450-17979122fbe3"}</msg>
+<msg timestamp="20240911 08:57:17.882" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\Jacqueline\\Documents\\projects\\SeleniumSimpleExample\\test_with_robotframework\\output\\browser\\traces\\a0df9b6e-329a-4448-b450-17979122fbe3"}</msg>
+<status status="PASS" starttime="20240911 08:57:17.661" endtime="20240911 08:57:17.882"/>
+</kw>
+<kw name="New Context" library="Browser">
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20240911 08:57:17.882" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 1080,
+    "width": 1920
+  }
+}</msg>
+<msg timestamp="20240911 08:57:17.898" level="INFO">Successfully created context. </msg>
+<msg timestamp="20240911 08:57:17.898" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 1080, 'width': 1920}}</msg>
+<status status="PASS" starttime="20240911 08:57:17.882" endtime="20240911 08:57:17.898"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20240911 08:57:22.245" level="INFO">Successfully initialized new page object and opened url: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</msg>
+<status status="PASS" starttime="20240911 08:57:17.898" endtime="20240911 08:57:22.246"/>
+</kw>
+<kw name="Wait For Load State" library="Browser">
+<arg>state=load</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<msg timestamp="20240911 08:57:22.246" level="INFO">Waiting page load to state to receive load in 10000.0</msg>
+<msg timestamp="20240911 08:57:22.250" level="INFO">Load state load got in 10000</msg>
+<status status="PASS" starttime="20240911 08:57:22.246" endtime="20240911 08:57:22.250"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>input[name="username"]</arg>
+<arg>${USER}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20240911 08:57:22.251" level="INFO">Fills the text 'Admin' in the given field.</msg>
+<status status="PASS" starttime="20240911 08:57:22.250" endtime="20240911 08:57:22.643"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>input[name="password"]</arg>
+<arg>${PASSWORD}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20240911 08:57:22.644" level="INFO">Fills the text 'admin123' in the given field.</msg>
+<status status="PASS" starttime="20240911 08:57:22.644" endtime="20240911 08:57:22.656"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>button.orangehrm-login-button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20240911 08:57:22.656" level="INFO">Clicks the element 'button.orangehrm-login-button'.</msg>
+<status status="PASS" starttime="20240911 08:57:22.656" endtime="20240911 08:57:23.733"/>
+</kw>
+<kw name="Wait For Load State" library="Browser">
+<arg>state=load</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<msg timestamp="20240911 08:57:23.733" level="INFO">Waiting page load to state to receive load in 10000.0</msg>
+<msg timestamp="20240911 08:57:23.796" level="INFO">Load state load got in 10000</msg>
+<status status="PASS" starttime="20240911 08:57:23.733" endtime="20240911 08:57:23.797"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:17.661" endtime="20240911 08:57:23.797"/>
+</kw>
+<test id="s1-s1-t1" name="Succeed Login" line="16">
+<kw name="Access Should Be Provided">
+<kw name="Wait For Load State" library="Browser">
+<arg>state=load</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<msg timestamp="20240911 08:57:23.803" level="INFO">Waiting page load to state to receive load in 10000.0</msg>
+<msg timestamp="20240911 08:57:23.806" level="INFO">Load state load got in 10000</msg>
+<status status="PASS" starttime="20240911 08:57:23.803" endtime="20240911 08:57:23.806"/>
+</kw>
+<kw name="Get Title" library="Browser">
+<arg>==</arg>
+<arg>OrangeHRM</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20240911 08:57:23.810" level="INFO">Title: 'OrangeHRM'</msg>
+<status status="PASS" starttime="20240911 08:57:23.806" endtime="20240911 08:57:23.810"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:23.802" endtime="20240911 08:57:23.810"/>
+</kw>
+<doc>Testing Login Page</doc>
+<tag>Login</tag>
+<status status="PASS" starttime="20240911 08:57:23.797" endtime="20240911 08:57:23.810"/>
+</test>
+<kw name="Logout Site" type="TEARDOWN">
+<kw name="Wait For Load State" library="Browser">
+<arg>state=load</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<msg timestamp="20240911 08:57:23.817" level="INFO">Waiting page load to state to receive load in 10000.0</msg>
+<msg timestamp="20240911 08:57:23.820" level="INFO">Load state load got in 10000</msg>
+<status status="PASS" starttime="20240911 08:57:23.817" endtime="20240911 08:57:23.820"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>i.oxd-userdropdown-icon</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20240911 08:57:23.821" level="INFO">Clicks the element 'i.oxd-userdropdown-icon'.</msg>
+<status status="PASS" starttime="20240911 08:57:23.820" endtime="20240911 08:57:24.212"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>a:text("Logout")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20240911 08:57:24.212" level="INFO">Clicks the element 'a:text("Logout")'.</msg>
+<status status="PASS" starttime="20240911 08:57:24.212" endtime="20240911 08:57:25.645"/>
+</kw>
+<kw name="Wait For Load State" library="Browser">
+<arg>state=load</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<msg timestamp="20240911 08:57:25.645" level="INFO">Waiting page load to state to receive load in 10000.0</msg>
+<msg timestamp="20240911 08:57:25.650" level="INFO">Load state load got in 10000</msg>
+<status status="PASS" starttime="20240911 08:57:25.645" endtime="20240911 08:57:25.650"/>
+</kw>
+<kw name="Get Url" library="Browser">
+<arg>==</arg>
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" starttime="20240911 08:57:25.650" endtime="20240911 08:57:25.653"/>
+</kw>
+<kw name="Close Context" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes a Context.</doc>
+<msg timestamp="20240911 08:57:25.658" level="INFO">Switching browser to CURRENT</msg>
+<msg timestamp="20240911 08:57:25.661" level="INFO">Returned active browser id. CURRENT</msg>
+<msg timestamp="20240911 08:57:25.661" level="INFO">Switching browser to browser=f8bac530-332a-46de-a840-872834b94cae</msg>
+<msg timestamp="20240911 08:57:25.663" level="INFO">Successfully changed active browser: browser=f8bac530-332a-46de-a840-872834b94cae</msg>
+<msg timestamp="20240911 08:57:25.663" level="INFO">Switching context to CURRENT in CURRENT</msg>
+<msg timestamp="20240911 08:57:25.665" level="INFO">Returned active context id: CURRENT</msg>
+<msg timestamp="20240911 08:57:25.666" level="INFO">Switching context to context=f05e6759-242d-4bcb-b400-adf906dc0642 in CURRENT</msg>
+<msg timestamp="20240911 08:57:25.670" level="INFO">Successfully changed active context: context=f05e6759-242d-4bcb-b400-adf906dc0642</msg>
+<msg timestamp="20240911 08:57:25.676" level="INFO">Successfully closed Context</msg>
+<status status="PASS" starttime="20240911 08:57:25.653" endtime="20240911 08:57:25.676"/>
+</kw>
+<kw name="Close Browser" library="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20240911 08:57:25.707" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20240911 08:57:25.676" endtime="20240911 08:57:25.707"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:23.817" endtime="20240911 08:57:25.707"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:16.956" endtime="20240911 08:57:25.707"/>
+</suite>
+<suite id="s1-s2" name="LoginTest2" source="C:\Users\Jacqueline\Documents\projects\SeleniumSimpleExample\test_with_robotframework\LoginTest2.robot">
+<kw name="New Browser" library="Browser" type="SETUP">
+<arg>browser=${BROWSER}</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20240911 08:57:25.742" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\Jacqueline\\Documents\\projects\\SeleniumSimpleExample\\test_with_robotframework\\output\\browser\\traces\\254d803b-0733-4b4c-8b1b-72864897c4bf"}</msg>
+<msg timestamp="20240911 08:57:25.942" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\Jacqueline\\Documents\\projects\\SeleniumSimpleExample\\test_with_robotframework\\output\\browser\\traces\\254d803b-0733-4b4c-8b1b-72864897c4bf"}</msg>
+<status status="PASS" starttime="20240911 08:57:25.742" endtime="20240911 08:57:25.942"/>
+</kw>
+<test id="s1-s2-t1" name="Login Page" line="18">
+<kw name="New Context" library="Browser" type="SETUP">
+<arg>viewport={'width': 800, 'height': 400}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20240911 08:57:25.942" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 400,
+    "width": 800
+  }
+}</msg>
+<msg timestamp="20240911 08:57:25.942" level="INFO">Successfully created context. </msg>
+<msg timestamp="20240911 08:57:25.942" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 400, 'width': 800}}</msg>
+<status status="PASS" starttime="20240911 08:57:25.942" endtime="20240911 08:57:25.942"/>
+</kw>
+<kw name="Given Site Is Open">
+<kw name="New Page" library="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20240911 08:57:28.916" level="INFO">Successfully initialized new page object and opened url: https://opensource-demo.orangehrmlive.com/</msg>
+<status status="PASS" starttime="20240911 08:57:25.942" endtime="20240911 08:57:28.917"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:25.942" endtime="20240911 08:57:28.917"/>
+</kw>
+<kw name="When I Login With Correct User And Pwd">
+<kw name="Wait For Load State" library="Browser">
+<arg>state=load</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<msg timestamp="20240911 08:57:28.918" level="INFO">Waiting page load to state to receive load in 10000.0</msg>
+<msg timestamp="20240911 08:57:28.931" level="INFO">Load state load got in 10000</msg>
+<status status="PASS" starttime="20240911 08:57:28.918" endtime="20240911 08:57:28.931"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>input[name="username"]</arg>
+<arg>${USER}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20240911 08:57:28.932" level="INFO">Fills the text 'Admin' in the given field.</msg>
+<status status="PASS" starttime="20240911 08:57:28.931" endtime="20240911 08:57:29.304"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>input[name="password"]</arg>
+<arg>${PASSWORD}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20240911 08:57:29.305" level="INFO">Fills the text 'admin123' in the given field.</msg>
+<status status="PASS" starttime="20240911 08:57:29.304" endtime="20240911 08:57:29.315"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>button.orangehrm-login-button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20240911 08:57:29.316" level="INFO">Clicks the element 'button.orangehrm-login-button'.</msg>
+<status status="PASS" starttime="20240911 08:57:29.316" endtime="20240911 08:57:30.359"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:28.918" endtime="20240911 08:57:30.359"/>
+</kw>
+<kw name="Then Access Should Be Provided">
+<kw name="Get Title" library="Browser">
+<arg>==</arg>
+<arg>OrangeHRM</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20240911 08:57:30.414" level="INFO">Title: 'OrangeHRM'</msg>
+<status status="PASS" starttime="20240911 08:57:30.360" endtime="20240911 08:57:30.414"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:30.360" endtime="20240911 08:57:30.414"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<arg>login</arg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20240911 08:57:30.483" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/login.png" target="_blank"&gt;&lt;img src="browser/screenshot/login.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240911 08:57:30.415" endtime="20240911 08:57:30.483"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${SLEEP}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240911 08:57:30.485" level="INFO">Slept 0 seconds</msg>
+<status status="PASS" starttime="20240911 08:57:30.484" endtime="20240911 08:57:30.485"/>
+</kw>
+<kw name="Close Context" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes a Context.</doc>
+<msg timestamp="20240911 08:57:30.489" level="INFO">Switching browser to CURRENT</msg>
+<msg timestamp="20240911 08:57:30.491" level="INFO">Returned active browser id. CURRENT</msg>
+<msg timestamp="20240911 08:57:30.491" level="INFO">Switching browser to browser=8b478cd8-a9e0-4b58-8aa3-467299145054</msg>
+<msg timestamp="20240911 08:57:30.493" level="INFO">Successfully changed active browser: browser=8b478cd8-a9e0-4b58-8aa3-467299145054</msg>
+<msg timestamp="20240911 08:57:30.493" level="INFO">Switching context to CURRENT in CURRENT</msg>
+<msg timestamp="20240911 08:57:30.496" level="INFO">Returned active context id: CURRENT</msg>
+<msg timestamp="20240911 08:57:30.496" level="INFO">Switching context to context=0dc94a6e-72cc-4845-bf93-4ce8ab3909b6 in CURRENT</msg>
+<msg timestamp="20240911 08:57:30.501" level="INFO">Successfully changed active context: context=0dc94a6e-72cc-4845-bf93-4ce8ab3909b6</msg>
+<msg timestamp="20240911 08:57:30.505" level="INFO">Successfully closed Context</msg>
+<status status="PASS" starttime="20240911 08:57:30.485" endtime="20240911 08:57:30.505"/>
+</kw>
+<doc>Test for login action</doc>
+<tag>Login</tag>
+<status status="PASS" starttime="20240911 08:57:25.942" endtime="20240911 08:57:30.506"/>
+</test>
+<test id="s1-s2-t2" name="Logout from Site" line="28">
+<kw name="New Context" library="Browser" type="SETUP">
+<arg>viewport={'width': 800, 'height': 400}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20240911 08:57:30.512" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "height": 400,
+    "width": 800
+  }
+}</msg>
+<msg timestamp="20240911 08:57:30.516" level="INFO">Successfully created context. </msg>
+<msg timestamp="20240911 08:57:30.517" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 400, 'width': 800}}</msg>
+<status status="PASS" starttime="20240911 08:57:30.512" endtime="20240911 08:57:30.517"/>
+</kw>
+<kw name="Given Site Is Open">
+<kw name="New Page" library="Browser">
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20240911 08:57:33.565" level="INFO">Successfully initialized new page object and opened url: https://opensource-demo.orangehrmlive.com/</msg>
+<status status="PASS" starttime="20240911 08:57:30.517" endtime="20240911 08:57:33.565"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:30.517" endtime="20240911 08:57:33.565"/>
+</kw>
+<kw name="When I Login With Correct User And Pwd">
+<kw name="Wait For Load State" library="Browser">
+<arg>state=load</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<msg timestamp="20240911 08:57:33.567" level="INFO">Waiting page load to state to receive load in 10000.0</msg>
+<msg timestamp="20240911 08:57:33.570" level="INFO">Load state load got in 10000</msg>
+<status status="PASS" starttime="20240911 08:57:33.566" endtime="20240911 08:57:33.571"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>input[name="username"]</arg>
+<arg>${USER}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20240911 08:57:33.571" level="INFO">Fills the text 'Admin' in the given field.</msg>
+<status status="PASS" starttime="20240911 08:57:33.571" endtime="20240911 08:57:33.960"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>input[name="password"]</arg>
+<arg>${PASSWORD}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20240911 08:57:33.961" level="INFO">Fills the text 'admin123' in the given field.</msg>
+<status status="PASS" starttime="20240911 08:57:33.961" endtime="20240911 08:57:33.974"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>button.orangehrm-login-button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20240911 08:57:33.975" level="INFO">Clicks the element 'button.orangehrm-login-button'.</msg>
+<status status="PASS" starttime="20240911 08:57:33.974" endtime="20240911 08:57:34.981"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:33.566" endtime="20240911 08:57:34.981"/>
+</kw>
+<kw name="And I Logout">
+<kw name="Wait For Load State" library="Browser">
+<arg>state=load</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<msg timestamp="20240911 08:57:34.982" level="INFO">Waiting page load to state to receive load in 10000.0</msg>
+<msg timestamp="20240911 08:57:35.038" level="INFO">Load state load got in 10000</msg>
+<status status="PASS" starttime="20240911 08:57:34.982" endtime="20240911 08:57:35.039"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>i.oxd-userdropdown-icon</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20240911 08:57:35.039" level="INFO">Clicks the element 'i.oxd-userdropdown-icon'.</msg>
+<status status="PASS" starttime="20240911 08:57:35.039" endtime="20240911 08:57:35.443"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>a:text("Logout")</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20240911 08:57:35.444" level="INFO">Clicks the element 'a:text("Logout")'.</msg>
+<status status="PASS" starttime="20240911 08:57:35.443" endtime="20240911 08:57:36.579"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:34.982" endtime="20240911 08:57:36.579"/>
+</kw>
+<kw name="Then Session Should Be Closed">
+<kw name="Wait For Load State" library="Browser">
+<arg>state=load</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits that the page reaches the required load state.</doc>
+<msg timestamp="20240911 08:57:36.581" level="INFO">Waiting page load to state to receive load in 10000.0</msg>
+<msg timestamp="20240911 08:57:36.584" level="INFO">Load state load got in 10000</msg>
+<status status="PASS" starttime="20240911 08:57:36.580" endtime="20240911 08:57:36.584"/>
+</kw>
+<kw name="Get Url" library="Browser">
+<arg>==</arg>
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" starttime="20240911 08:57:36.585" endtime="20240911 08:57:36.587"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:36.580" endtime="20240911 08:57:36.587"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20240911 08:57:36.632" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240911 08:57:36.587" endtime="20240911 08:57:36.632"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${SLEEP}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240911 08:57:36.633" level="INFO">Slept 0 seconds</msg>
+<status status="PASS" starttime="20240911 08:57:36.633" endtime="20240911 08:57:36.633"/>
+</kw>
+<kw name="Close Context" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes a Context.</doc>
+<msg timestamp="20240911 08:57:36.637" level="INFO">Switching browser to CURRENT</msg>
+<msg timestamp="20240911 08:57:36.639" level="INFO">Returned active browser id. CURRENT</msg>
+<msg timestamp="20240911 08:57:36.639" level="INFO">Switching browser to browser=8b478cd8-a9e0-4b58-8aa3-467299145054</msg>
+<msg timestamp="20240911 08:57:36.641" level="INFO">Successfully changed active browser: browser=8b478cd8-a9e0-4b58-8aa3-467299145054</msg>
+<msg timestamp="20240911 08:57:36.641" level="INFO">Switching context to CURRENT in CURRENT</msg>
+<msg timestamp="20240911 08:57:36.643" level="INFO">Returned active context id: CURRENT</msg>
+<msg timestamp="20240911 08:57:36.644" level="INFO">Switching context to context=d5a7b9f0-5dd0-4bd5-a2c9-349a88bc727c in CURRENT</msg>
+<msg timestamp="20240911 08:57:36.649" level="INFO">Successfully changed active context: context=d5a7b9f0-5dd0-4bd5-a2c9-349a88bc727c</msg>
+<msg timestamp="20240911 08:57:36.653" level="INFO">Successfully closed Context</msg>
+<status status="PASS" starttime="20240911 08:57:36.634" endtime="20240911 08:57:36.653"/>
+</kw>
+<doc>Test for logout action</doc>
+<tag>Logout</tag>
+<status status="PASS" starttime="20240911 08:57:30.510" endtime="20240911 08:57:36.653"/>
+</test>
+<kw name="Close Browser" library="Browser" type="TEARDOWN">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<msg timestamp="20240911 08:57:37.977" level="INFO">Closed browser</msg>
+<status status="PASS" starttime="20240911 08:57:36.658" endtime="20240911 08:57:37.978"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:25.736" endtime="20240911 08:57:37.978"/>
+</suite>
+<suite id="s1-s3" name="LoginTest3" source="C:\Users\Jacqueline\Documents\projects\SeleniumSimpleExample\test_with_robotframework\LoginTest3.robot">
+<test id="s1-s3-t1" name="Login Page" line="15">
+<kw name="Open Url" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240911 08:57:38.158" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001AA53B151F0&gt;</msg>
+<status status="PASS" starttime="20240911 08:57:38.158" endtime="20240911 08:57:38.158"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240911 08:57:38.158" endtime="20240911 08:57:38.158"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240911 08:57:38.158" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20240911 08:57:38.158" endtime="20240911 08:57:42.169"/>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<arg>return !!document.body</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20240911 08:57:42.169" endtime="20240911 08:57:42.173"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:38.158" endtime="20240911 08:57:42.173"/>
+</kw>
+<kw name="When I Login With Correct User And Pwd">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>name:username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240911 08:57:42.174" endtime="20240911 08:57:42.609"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name="username"]</arg>
+<arg>${USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240911 08:57:42.609" level="INFO">Typing text 'Admin' into text field '//input[@name="username"]'.</msg>
+<status status="PASS" starttime="20240911 08:57:42.609" endtime="20240911 08:57:42.665"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240911 08:57:42.666" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg timestamp="20240911 08:57:42.686" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240911 08:57:42.727" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240911 08:57:42.665" endtime="20240911 08:57:42.727"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240911 08:57:42.727" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20240911 08:57:42.727" endtime="20240911 08:57:42.769"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:42.174" endtime="20240911 08:57:42.769"/>
+</kw>
+<kw name="Then Access Should Be Provided">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//h6[text()='Dashboard']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240911 08:57:42.770" endtime="20240911 08:57:44.199"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>OrangeHRM</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20240911 08:57:44.199" level="INFO">Page title is 'OrangeHRM'.</msg>
+<status status="PASS" starttime="20240911 08:57:44.199" endtime="20240911 08:57:44.199"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:42.769" endtime="20240911 08:57:44.199"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>Login.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240911 08:57:44.303" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Login.png"&gt;&lt;img src="Login.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240911 08:57:44.199" endtime="20240911 08:57:44.303"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240911 08:57:44.303" endtime="20240911 08:57:46.402"/>
+</kw>
+<doc>Test for login action</doc>
+<tag>Login</tag>
+<status status="PASS" starttime="20240911 08:57:38.158" endtime="20240911 08:57:46.402"/>
+</test>
+<test id="s1-s3-t2" name="Logout From Site" line="23">
+<kw name="Open Url" type="SETUP">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240911 08:57:46.402" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001AA53B5FEB0&gt;</msg>
+<status status="PASS" starttime="20240911 08:57:46.402" endtime="20240911 08:57:46.402"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240911 08:57:46.402" endtime="20240911 08:57:46.402"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240911 08:57:46.402" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20240911 08:57:46.402" endtime="20240911 08:57:50.897"/>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<arg>return !!document.body</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20240911 08:57:50.897" endtime="20240911 08:57:50.900"/>
+</kw>
+<status status="PASS" starttime="20240911 08:57:46.402" endtime="20240911 08:57:50.900"/>
+</kw>
+<kw name="When I Login With Correct User And Pwd">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>name:username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240911 08:58:24.553" endtime="20240911 08:58:24.584"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name="username"]</arg>
+<arg>${USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240911 08:58:24.584" level="INFO">Typing text 'Admin' into text field '//input[@name="username"]'.</msg>
+<status status="PASS" starttime="20240911 08:58:24.584" endtime="20240911 08:58:24.643"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240911 08:58:24.643" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg timestamp="20240911 08:58:24.664" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240911 08:58:24.699" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240911 08:58:24.643" endtime="20240911 08:58:24.699"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240911 08:58:24.699" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20240911 08:58:24.699" endtime="20240911 08:58:24.740"/>
+</kw>
+<status status="PASS" starttime="20240911 08:58:24.553" endtime="20240911 08:58:24.740"/>
+</kw>
+<kw name="And I Logout">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//img[@alt='profile picture']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240911 08:58:24.740" endtime="20240911 08:58:28.275"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//img[@alt='profile picture']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240911 08:58:28.275" level="INFO">Clicking element 'xpath=//img[@alt='profile picture']'.</msg>
+<status status="PASS" starttime="20240911 08:58:28.275" endtime="20240911 08:58:28.306"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[text()='Logout']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240911 08:58:28.306" level="INFO">Clicking element 'xpath=//a[text()='Logout']'.</msg>
+<status status="PASS" starttime="20240911 08:58:28.306" endtime="20240911 08:58:32.689"/>
+</kw>
+<status status="PASS" starttime="20240911 08:58:24.740" endtime="20240911 08:58:32.689"/>
+</kw>
+<kw name="Then Session Should Be Closed">
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<arg>return document.readyState == "complete"</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20240911 08:58:32.689" endtime="20240911 08:58:32.693"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20240911 08:58:32.699" level="INFO">Current location is 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<status status="PASS" starttime="20240911 08:58:32.693" endtime="20240911 08:58:32.699"/>
+</kw>
+<status status="PASS" starttime="20240911 08:58:32.689" endtime="20240911 08:58:32.700"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>Logout.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240911 08:58:32.747" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Logout.png"&gt;&lt;img src="Logout.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240911 08:58:32.700" endtime="20240911 08:58:32.747"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240911 08:58:32.747" endtime="20240911 08:58:34.849"/>
+</kw>
+<doc>Test for logout action</doc>
+<tag>Logout</tag>
+<status status="PASS" starttime="20240911 08:57:46.402" endtime="20240911 08:58:34.849"/>
+</test>
+<status status="PASS" starttime="20240911 08:57:37.998" endtime="20240911 08:58:34.849"/>
+</suite>
+<status status="PASS" starttime="20240911 08:57:16.941" endtime="20240911 08:58:34.849"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">Login</stat>
+<stat pass="2" fail="0" skip="0">Logout</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Test With Robotframework">Test With Robotframework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="LoginTest">Test With Robotframework.LoginTest</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s2" name="LoginTest2">Test With Robotframework.LoginTest2</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s3" name="LoginTest3">Test With Robotframework.LoginTest3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

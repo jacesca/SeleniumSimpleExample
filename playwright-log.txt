@@ -1,0 +1,40 @@
+{"level":30,"time":"2024-09-11T15:12:37.495Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Listening on 54673"}
+{"level":30,"time":"2024-09-11T15:12:37.743Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2024-09-11T15:12:37.961Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Adding browser to stack: chromium, version: 113.0.5672.53"}
+{"level":30,"time":"2024-09-11T15:12:37.961Z","pid":23736,"hostname":"LPTACRNTR5","msg":"End of node method newBrowser"}
+{"level":30,"time":"2024-09-11T15:12:37.961Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2024-09-11T15:12:37.964Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Start of node method newPage"}
+{"level":30,"time":"2024-09-11T15:12:37.965Z","pid":23736,"hostname":"LPTACRNTR5","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2024-09-11T15:12:37.970Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Changed active context"}
+{"level":30,"time":"2024-09-11T15:12:39.351Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Video path: undefined"}
+{"level":30,"time":"2024-09-11T15:12:39.351Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Changed active page"}
+{"level":30,"time":"2024-09-11T15:12:42.704Z","pid":23736,"hostname":"LPTACRNTR5","msg":"End of node method newPage"}
+{"level":30,"time":"2024-09-11T15:12:42.707Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2024-09-11T15:12:42.707Z","pid":23736,"hostname":"LPTACRNTR5","msg":"timeout: 10000 state: load"}
+{"level":30,"time":"2024-09-11T15:12:42.709Z","pid":23736,"hostname":"LPTACRNTR5","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2024-09-11T15:12:42.711Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-09-11T15:12:42.711Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Strict mode is enabled, find Locator with input[name=\"username\"] in page."}
+{"level":30,"time":"2024-09-11T15:12:43.100Z","pid":23736,"hostname":"LPTACRNTR5","msg":"End of node method fillText"}
+{"level":30,"time":"2024-09-11T15:12:43.102Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Start of node method fillText"}
+{"level":30,"time":"2024-09-11T15:12:43.102Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Strict mode is enabled, find Locator with input[name=\"password\"] in page."}
+{"level":30,"time":"2024-09-11T15:12:43.112Z","pid":23736,"hostname":"LPTACRNTR5","msg":"End of node method fillText"}
+{"level":30,"time":"2024-09-11T15:12:43.114Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Start of node method click"}
+{"level":30,"time":"2024-09-11T15:12:43.114Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Strict mode is enabled, find Locator with button.orangehrm-login-button in page."}
+{"level":30,"time":"2024-09-11T15:12:44.133Z","pid":23736,"hostname":"LPTACRNTR5","msg":"End of node method click"}
+{"level":30,"time":"2024-09-11T15:12:44.196Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2024-09-11T15:12:44.196Z","pid":23736,"hostname":"LPTACRNTR5","msg":"timeout: 10000 state: load"}
+{"level":30,"time":"2024-09-11T15:12:44.197Z","pid":23736,"hostname":"LPTACRNTR5","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2024-09-11T15:12:44.199Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Start of node method click"}
+{"level":30,"time":"2024-09-11T15:12:44.199Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Strict mode is enabled, find Locator with i.oxd-userdropdown-icon in page."}
+{"level":30,"time":"2024-09-11T15:12:44.592Z","pid":23736,"hostname":"LPTACRNTR5","msg":"End of node method click"}
+{"level":30,"time":"2024-09-11T15:12:44.594Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Start of node method click"}
+{"level":30,"time":"2024-09-11T15:12:44.595Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Strict mode is enabled, find Locator with a:text(\"Logout\") in page."}
+{"level":30,"time":"2024-09-11T15:12:45.669Z","pid":23736,"hostname":"LPTACRNTR5","msg":"End of node method click"}
+{"level":30,"time":"2024-09-11T15:12:45.671Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Start of node method WaitForPageLoadState"}
+{"level":30,"time":"2024-09-11T15:12:45.671Z","pid":23736,"hostname":"LPTACRNTR5","msg":"timeout: 10000 state: load"}
+{"level":30,"time":"2024-09-11T15:12:45.674Z","pid":23736,"hostname":"LPTACRNTR5","msg":"End of node method WaitForPageLoadState"}
+{"level":30,"time":"2024-09-11T15:12:45.679Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2024-09-11T15:12:45.682Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Removed page=3c50706b-c1b4-46cd-a747-d17ff059b721 from context=cbc14d17-6e8b-4d41-b881-9dce1ae202cf page stack"}
+{"level":30,"time":"2024-09-11T15:12:45.717Z","pid":23736,"hostname":"LPTACRNTR5","msg":"End of node method closeAllBrowsers"}
+{"level":30,"time":"2024-09-11T15:12:45.723Z","pid":23736,"hostname":"LPTACRNTR5","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2024-09-11T15:12:45.724Z","pid":23736,"hostname":"LPTACRNTR5","msg":"End of node method closeAllBrowsers"}
